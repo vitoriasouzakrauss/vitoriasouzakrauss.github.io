@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contrato de Aluguel</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+		
+	<h2 class="contrato-titulo">Gerador - Contrato de Imóvel</h2>
+
+	<div class="container">
+		<form id="contratoForm" autocomplete="off">
+			<fieldset>
+				<legend>Locador - Dados Pessoais</legend>
+				<div class="row">
+					<input type="text" id="locadorNomeCompleto" placeholder="NOME COMPLETO" required>
+					<input type="text" id="locadorNacionalidade" placeholder="NACIONALIDADE" list="n">
+					<datalist id="n">
+						<option value="Brasileiro(a)">
+						<option value="Estrangeiro(a)">
+					</datalist>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locadorEstadoCivil" placeholder="ESTADO CÍVIL" list="ec">
+					<datalist id="ec">
+						<option value="Solteiro(a)">
+						<option value="União Estável">
+						<option value="Casado(a)">
+						<option value="Divorciado(a)">
+						<option value="Viúvo(a)">
+					</datalist>
+					<input type="text" id="locadorProfissao" placeholder="PROFISSÃO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locadorCPF" class="mask-cpf" placeholder="CPF" required>
+					<input type="text" id="locadorRG"  class="mask-rg" placeholder="RG" required>
+				</div>
+
+			</fieldset>
+
+
+			<fieldset>
+				
+				<legend>Locador - Endereço</legend>
+				<div class="row">
+					<input type="text" id="locadorLogradouro" placeholder="LOGRADOURO" required>
+					<input type="text" id="locadorComplemento" placeholder="COMPLEMENTO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locadorBairro" placeholder="BAIRRO" required>
+					<input type="number" id="locadorNumero" placeholder="NÚMERO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locadorCidade" placeholder="CIDADE" required>
+					<input type="text" id="locadorCEP" placeholder="CEP" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locadorUF" placeholder="UF" list="uf" required>
+					<datalist id="uf">
+						<option value="AC">
+	                    <option value="AL">
+	                    <option value="AP">
+	                    <option value="AM">
+	                    <option value="BA">
+	                    <option value="CE">
+	                    <option value="DF">
+	                    <option value="ES">
+	                    <option value="GO">
+	                    <option value="MA">
+	                    <option value="MT">
+	                    <option value="MS">
+	                    <option value="MG">
+	                    <option value="PA">
+	                    <option value="PB">
+	                    <option value="PR">
+	                    <option value="PE">
+	                    <option value="PI">
+	                    <option value="RJ">
+	                    <option value="RN">
+	                    <option value="RS">
+	                    <option value="RO">
+	                    <option value="RR">
+	                    <option value="SC">
+	                    <option value="SP">
+	                    <option value="SE">
+	                    <option value="TO">
+					</datalist>
+				</div>
+
+			</fieldset>
+
+			<!-- locatario -->
+
+			<fieldset>
+				<legend>Locatário- Dados Pessoais</legend>
+				<div class="row">
+					<input type="text" id="locatarioNomeCompleto" placeholder="NOME COMPLETO" required>
+					<input type="text" id="locatarioNacionalidade" placeholder="NACIONALIDADE" list="n">
+					<datalist id="n">
+						<option value="Brasileiro(a)">
+						<option value="Estrangeiro(a)">
+					</datalist>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locatarioEstadoCivil" placeholder="ESTADO CÍVIL" list="ec">
+					<datalist id="ec">
+						<option value="Solteiro(a)">
+						<option value="União Estável">
+						<option value="Casado(a)">
+						<option value="Divorciado(a)">
+						<option value="Viúvo(a)">
+					</datalist>
+					<input type="text" id="locatarioProfissao" placeholder="PROFISSÃO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locatarioCPF" class="mask-cpf" placeholder="CPF" required>
+					<input type="text" id="locatarioRG"  class="mask-rg" placeholder="RG" required>
+				</div>
+
+			</fieldset>
+
+
+
+
+			<fieldset>
+				
+				<legend>Locatário - Endereço</legend>
+				<div class="row">
+					<input type="text" id="locatarioLogradouro" placeholder="LOGRADOURO" required>
+					<input type="text" id="locatarioComplemento" placeholder="COMPLEMENTO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locatarioBairro" placeholder="BAIRRO" required>
+					<input type="number" id="locatarioNumero" placeholder="NÚMERO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locatarioCidade" placeholder="CIDADE" required>
+					<input type="text" id="locatarioCEP" placeholder="CEP" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="locatarioUF" placeholder="UF" list="uf" required>
+					<datalist id="uf">
+						<option value="AC">
+	                    <option value="AL">
+	                    <option value="AP">
+	                    <option value="AM">
+	                    <option value="BA">
+	                    <option value="CE">
+	                    <option value="DF">
+	                    <option value="ES">
+	                    <option value="GO">
+	                    <option value="MA">
+	                    <option value="MT">
+	                    <option value="MS">
+	                    <option value="MG">
+	                    <option value="PA">
+	                    <option value="PB">
+	                    <option value="PR">
+	                    <option value="PE">
+	                    <option value="PI">
+	                    <option value="RJ">
+	                    <option value="RN">
+	                    <option value="RS">
+	                    <option value="RO">
+	                    <option value="RR">
+	                    <option value="SC">
+	                    <option value="SP">
+	                    <option value="SE">
+	                    <option value="TO">
+					</datalist>
+				</div>
+
+			</fieldset>
+
+
+			<fieldset>
+				
+				<legend>Dados do Imóvel</legend>
+				<div class="row">
+					<input type="text" id="imovelLogradouro" placeholder="LOGRADOURO" required>
+					<input type="text" id="imovelComplemento" placeholder="COMPLEMENTO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="imovelBairro" placeholder="BAIRRO" required>
+					<input type="number" id="imovelNumero" placeholder="NÚMERO" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="imovelCidade" placeholder="CIDADE" required>
+					<input type="text" id="imovelCEP" placeholder="CEP" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="imovelUF" placeholder="UF" list="uf" required>
+					<datalist id="uf">
+						<option value="AC">
+	                    <option value="AL">
+	                    <option value="AP">
+	                    <option value="AM">
+	                    <option value="BA">
+	                    <option value="CE">
+	                    <option value="DF">
+	                    <option value="ES">
+	                    <option value="GO">
+	                    <option value="MA">
+	                    <option value="MT">
+	                    <option value="MS">
+	                    <option value="MG">
+	                    <option value="PA">
+	                    <option value="PB">
+	                    <option value="PR">
+	                    <option value="PE">
+	                    <option value="PI">
+	                    <option value="RJ">
+	                    <option value="RN">
+	                    <option value="RS">
+	                    <option value="RO">
+	                    <option value="RR">
+	                    <option value="SC">
+	                    <option value="SP">
+	                    <option value="SE">
+	                    <option value="TO">
+					</datalist>
+				</div>
+
+			</fieldset>
+
+			<fieldset>
+				<legend>Termos do Contrato</legend>
+				<div class="row">
+					<input type="text" id="contratoAluguel" class="mask-money" placeholder="Preço do Aluguel R$" required>
+					<input type="text" id="contratoAgua" class="mask-money" placeholder="Preço da Água R$" required>
+				</div>
+
+				<div class="row">
+					<input type="text" id="contratoLimpeza" class="mask-money"placeholder="Preço da Limpeza R$" required>
+				</div>
+
+				<div class="row">
+					<input type="date" id="contratoDtInicial" required>
+					<input type="date" id="contratoDtFinal" required>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Informações Adicionais</legend>
+				<div class="row">
+					<input type="text" id="contratoCidade" placeholder="CIDADE" required>
+					<input type="text" id="contratoUF" placeholder="UF" list="uf" required>
+					<datalist id="uf">
+						<option value="AC">
+	                    <option value="AL">
+	                    <option value="AP">
+	                    <option value="AM">
+	                    <option value="BA">
+	                    <option value="CE">
+	                    <option value="DF">
+	                    <option value="ES">
+	                    <option value="GO">
+	                    <option value="MA">
+	                    <option value="MT">
+	                    <option value="MS">
+	                    <option value="MG">
+	                    <option value="PA">
+	                    <option value="PB">
+	                    <option value="PR">
+	                    <option value="PE">
+	                    <option value="PI">
+	                    <option value="RJ">
+	                    <option value="RN">
+	                    <option value="RS">
+	                    <option value="RO">
+	                    <option value="RR">
+	                    <option value="SC">
+	                    <option value="SP">
+	                    <option value="SE">
+	                    <option value="TO">
+					</datalist>
+				</div>
+			</fieldset>
+
+			<div class="row">
+				<button type="submit">Gerar Contrato</button>
+			</div>
+		</form>
+	</div>
+
+	<div class="container-contrato">
+		<div class="space">
+		</div>
+		<!-- Visualização do Contrato -->
+    	<div id="contratoPreview" class="hidden">
+        	<div id="contratoContent" style="display:inline-block;">
+            	<!-- Seu conteudo aqui -->
+        	</div>
+    	</div>
+	</div>
+
+
+	<div class="container-contrato">
+		<div class="row">
+        	<button id="exportarPDF">Exportar para PDF</button>
+    	</div>
+	</div>
+	<script src="./assets/js/script.js"></script>
+</body>
+</html>
