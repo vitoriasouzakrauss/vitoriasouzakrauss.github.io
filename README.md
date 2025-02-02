@@ -39,7 +39,7 @@ Tecnologias Utilizadas:
 __Licença__
 
 Foto 1
-![FOTO1(https://github.com/vitoriasouzakrauss/vitoriasouzakrauss.github.io/blob/main/assets/data/Contrato%20de%20Aluguel.jpeg))
+![FOTO1](https://github.com/vitoriasouzakrauss/vitoriasouzakrauss.github.io/blob/main/assets/data/Contrato%20de%20Aluguel.jpeg)
 
 FOTO 2
 ![FOTO2](https://github.com/vitoriasouzakrauss/vitoriasouzakrauss.github.io/blob/main/assets/data/Contrato%20de%20Aluguel001.jpeg)
