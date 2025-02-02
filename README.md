@@ -36,9 +36,9 @@ Tecnologias Utilizadas:
 - html2pdf
 - jsPDF
 
-__Licença__
+Galerias de Fotos:
+-----------------------
 
-Foto 1
 ![FOTO1](https://github.com/vitoriasouzakrauss/vitoriasouzakrauss.github.io/blob/main/assets/data/Contrato%20de%20Aluguel.jpeg)
 
 FOTO 2
