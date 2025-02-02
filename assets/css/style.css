@@ -1,0 +1,153 @@
+*{
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
+}
+
+body{
+	font-family: 'Time New Roman', 'Arial', Serif;
+	font-size:12px;
+	margin:10px;
+}
+
+.space{
+	margin-top:25px;
+}
+
+.contrato-titulo{
+	text-align:center;
+	padding:12px;
+	margin-top:40px;
+}
+
+.container{
+	display:flex;
+	flex-direction:row;
+	align-content:center;
+	align-items:center;
+	justify-content:center;
+	margin:10px;
+}
+
+.container-contrato{
+	display:flex;
+	flex-direction:row;
+	align-content:center;
+	align-items:center;
+	justify-content:center;
+	margin:10px;
+}
+
+legend{
+	text-align:center;
+	font-size:16px;
+	font-weight: bolder;
+	padding:10px;
+}
+
+fieldset{
+	border:1px solid black;
+	border-radius:5px;
+	padding:12px;
+}
+
+option{
+	font-weight:bolder;
+}
+
+input{
+	margin:4px;
+	padding:10px;
+	width:300px;
+	font-weight:bolder;
+	text-align:center;
+	font-size:14px;
+}
+
+
+button {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #34495e;
+}
+
+p{
+	margin:0px;
+}
+
+.assinatura{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-content:center;
+	align-items:center;
+	gap:100px;
+}
+
+.ass{
+	width:200px;
+	border:1px solid black;
+}
+
+.line-assinature{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+	text-align:center;
+	width:100%;
+}
+
+.div-ass{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	align-content:center;
+	text-align:center;
+	margin-top:10px;
+}
+
+.subtitle{
+	font-weight:bolder;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+/* No arquivo style.css */
+#contratoContent {
+    width: 210mm !important;
+    min-height: 297mm;
+    padding: 20px 35px; /* Margens internas compatíveis com A4 */
+    box-sizing: border-box;
+    word-wrap: break-word; /* Quebra palavras longas */
+    overflow-wrap: anywhere;
+    hyphens: auto; /* Hifenização automática */
+    text-align: justify;
+    margin: 0 auto;
+}
+
+/* Ajuste para parágrafos */
+#contratoContent p {
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+    padding: 0;
+    line-height: 1.6;
+    text-indent: 40px; /* Recuo de parágrafo */
+    orphans: 3; /* Evita linhas solitárias */
+    widows: 3;
+}
